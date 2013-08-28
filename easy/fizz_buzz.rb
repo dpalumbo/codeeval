@@ -3,10 +3,10 @@ File.open(ARGV[0]).each_line do |line|
   l = ""
   for i in 1..n
     str = ""
-    str += "F" if i % a == 0
-    str += "B" if i % b == 0
+    str << "F" if i % a == 0
+    str << "B" if i % b == 0
     str = i.to_s if str == ""
-    l += str + " "
+    l << str + " "
   end
   puts l.strip
 end
